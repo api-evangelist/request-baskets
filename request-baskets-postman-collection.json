@@ -1,0 +1,369 @@
+{
+    "id": "f3d567208a83d78bb08012b9af847d50",
+    "name": "Request Baskets",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "f2d18ceb1d7b4c44094dbf7d30ce19e8",
+            "name": "Get baskets",
+            "url": "httpsrbaskets.in\/\/baskets",
+            "description": "Fetches a list of basket names managed by service. Require master token.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "max",
+                    "description": "Maximum number of basket names to return; default 20",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "skip",
+                    "description": "Number of basket names to skip; default 0",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "q",
+                    "description": "Query string to filter result, only those basket names that match the query will be included in response",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "f3d567208a83d78bb08012b9af847d50",
+            "rawModeData": ""
+        },
+        {
+            "id": "2493d8e953be1b857b3944e39665476b",
+            "name": "Delete basket",
+            "url": "httpsrbaskets.in\/\/baskets\/{name}",
+            "description": "Permanently deletes this basket and all collected requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "name",
+                    "description": "The basket name",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "f3d567208a83d78bb08012b9af847d50",
+            "rawModeData": ""
+        },
+        {
+            "id": "97ecf3cd6cc06c256bfc7bfd37c94cfd",
+            "name": "Get basket settings",
+            "url": "httpsrbaskets.in\/\/baskets\/{name}",
+            "description": "Retrieves configuration settings of this basket.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "name",
+                    "description": "The basket name",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "f3d567208a83d78bb08012b9af847d50",
+            "rawModeData": ""
+        },
+        {
+            "id": "e3727be652dba5ccd2d45c5c47876357",
+            "name": "Create new basket",
+            "url": "httpsrbaskets.in\/\/baskets\/{name}",
+            "description": "Creates a new basket with this name.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "name",
+                    "description": "The basket name",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "config",
+                    "description": "Basket configuration",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "f3d567208a83d78bb08012b9af847d50",
+            "rawModeData": ""
+        },
+        {
+            "id": "27e7635e9410a913dd456f5518d029aa",
+            "name": "Update basket settings",
+            "url": "httpsrbaskets.in\/\/baskets\/{name}",
+            "description": "Updates configuration settings of this basket.\n\nSpecial configuration parameters for request forwarding:\n  * `insecure_tls` controls certificate verification when forwarding requests. Setting this parameter to `true`\n  allows to forward collected HTTP requests via HTTPS protocol even if the forward end-point is configured with\n  self-signed TLS\/SSL certificate. **Warning:** enabling this feature has known security implications.\n  * `expand_path` changes the logic of constructing taget URL when f",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "name",
+                    "description": "The basket name",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "config",
+                    "description": "Basket configuration",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "f3d567208a83d78bb08012b9af847d50",
+            "rawModeData": ""
+        },
+        {
+            "id": "46a59c5d2e4f5ef99691221f25e77aff",
+            "name": "Delete all requests",
+            "url": "httpsrbaskets.in\/\/baskets\/{name}\/requests",
+            "description": "Deletes all requests collected by this basket.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "name",
+                    "description": "The basket name",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "f3d567208a83d78bb08012b9af847d50",
+            "rawModeData": ""
+        },
+        {
+            "id": "0c01310f8d3539e39b2e912839715dec",
+            "name": "Get collected requests",
+            "url": "httpsrbaskets.in\/\/baskets\/{name}\/requests",
+            "description": "Fetches collection of requests collected by this basket.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "name",
+                    "description": "The basket name",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "max",
+                    "description": "Maximum number of basket names to return; default 20",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "skip",
+                    "description": "Number of basket names to skip; default 0",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "q",
+                    "description": "Query string to filter result, only those basket names that match the query will be included in response",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "in",
+                    "description": "Defines what is taken into account when filtering is applied: `body` - search in content body of collected requests,\n`query` - search among query parameters of collected requests, `headers` - search among request header values,\n`any` - search anywhere; default `any`\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "f3d567208a83d78bb08012b9af847d50",
+            "rawModeData": ""
+        },
+        {
+            "id": "a93146bdf730ff2824ec8c7e12d02597",
+            "name": "Get response settings",
+            "url": "httpsrbaskets.in\/\/baskets\/{name}\/responses\/{method}",
+            "description": "Retrieves information about configured response of the basket. Service will reply with this response to any\nHTTP request sent to the basket with appropriate HTTP method.\n\nIf nothing is configured, the default response is HTTP 200 - OK with empty content.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "name",
+                    "description": "The basket name",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "method",
+                    "description": "The HTTP method this response is configured for",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "f3d567208a83d78bb08012b9af847d50",
+            "rawModeData": ""
+        },
+        {
+            "id": "a23728d228fb99d15bb1db9b1cd2f24a",
+            "name": "Update response settings",
+            "url": "httpsrbaskets.in\/\/baskets\/{name}\/responses\/{method}",
+            "description": "Allows to configure HTTP response of this basket. The service will reply with configured response to any HTTP\nrequest sent to the basket with appropriate HTTP method.\n\nIf nothing is configured, the default response is HTTP 200 - OK with empty content.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "name",
+                    "description": "The basket name",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "method",
+                    "description": "The HTTP method this response is configured for",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "response",
+                    "description": "HTTP response configuration",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "f3d567208a83d78bb08012b9af847d50",
+            "rawModeData": ""
+        }
+    ]
+}
