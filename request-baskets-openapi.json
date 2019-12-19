@@ -1,0 +1,312 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "0.5",
+        "title": "Request Baskets",
+        "description": "RESTful API of Request Baskets service",
+        "termsOfService": ""
+    },
+    "servers": [
+        "httpsrbaskets.in\/"
+    ],
+    "paths": {
+        "\/baskets": {
+            "get": {
+                "summary": "Get baskets",
+                "description": "Fetches a list of basket names managed by service. Require master token.",
+                "operationId": "BasketsGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "max",
+                        "in": "query",
+                        "description": "Maximum number of basket names to return; default 20"
+                    },
+                    {
+                        "name": "skip",
+                        "in": "query",
+                        "description": "Number of basket names to skip; default 0"
+                    },
+                    {
+                        "name": "q",
+                        "in": "query",
+                        "description": "Query string to filter result, only those basket names that match the query will be included in response"
+                    }
+                ]
+            }
+        },
+        "\/baskets\/{name}": {
+            "delete": {
+                "summary": "Delete basket",
+                "description": "Permanently deletes this basket and all collected requests.",
+                "operationId": "BasketsNameDelete",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "path",
+                        "description": "The basket name"
+                    }
+                ]
+            },
+            "get": {
+                "summary": "Get basket settings",
+                "description": "Retrieves configuration settings of this basket.",
+                "operationId": "BasketsNameGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "path",
+                        "description": "The basket name"
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Create new basket",
+                "description": "Creates a new basket with this name.",
+                "operationId": "BasketsNamePost",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "path",
+                        "description": "The basket name"
+                    },
+                    {
+                        "name": "config",
+                        "in": "body",
+                        "description": "Basket configuration"
+                    }
+                ]
+            },
+            "put": {
+                "summary": "Update basket settings",
+                "description": "Updates configuration settings of this basket.\n\nSpecial configuration parameters for request forwarding:\n  * `insecure_tls` controls certificate verification when forwarding requests. Setting this parameter to `true`\n  allows to forward collected HTTP requests via HTTPS protocol even if the forward end-point is configured with\n  self-signed TLS\/SSL certificate. **Warning:** enabling this feature has known security implications.\n  * `expand_path` changes the logic of constructing taget URL when f",
+                "operationId": "BasketsNamePut",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "path",
+                        "description": "The basket name"
+                    },
+                    {
+                        "name": "config",
+                        "in": "body",
+                        "description": "Basket configuration"
+                    }
+                ]
+            }
+        },
+        "\/baskets\/{name}\/requests": {
+            "delete": {
+                "summary": "Delete all requests",
+                "description": "Deletes all requests collected by this basket.",
+                "operationId": "BasketsNameRequestsDelete",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "path",
+                        "description": "The basket name"
+                    }
+                ]
+            },
+            "get": {
+                "summary": "Get collected requests",
+                "description": "Fetches collection of requests collected by this basket.",
+                "operationId": "BasketsNameRequestsGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "path",
+                        "description": "The basket name"
+                    },
+                    {
+                        "name": "max",
+                        "in": "query",
+                        "description": "Maximum number of basket names to return; default 20"
+                    },
+                    {
+                        "name": "skip",
+                        "in": "query",
+                        "description": "Number of basket names to skip; default 0"
+                    },
+                    {
+                        "name": "q",
+                        "in": "query",
+                        "description": "Query string to filter result, only those basket names that match the query will be included in response"
+                    },
+                    {
+                        "name": "in",
+                        "in": "query",
+                        "description": "Defines what is taken into account when filtering is applied: `body` - search in content body of collected requests,\n`query` - search among query parameters of collected requests, `headers` - search among request header values,\n`any` - search anywhere; default `any`\n"
+                    }
+                ]
+            }
+        },
+        "\/baskets\/{name}\/responses\/{method}": {
+            "get": {
+                "summary": "Get response settings",
+                "description": "Retrieves information about configured response of the basket. Service will reply with this response to any\nHTTP request sent to the basket with appropriate HTTP method.\n\nIf nothing is configured, the default response is HTTP 200 - OK with empty content.\n",
+                "operationId": "BasketsNameResponsesMethodGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "path",
+                        "description": "The basket name"
+                    },
+                    {
+                        "name": "method",
+                        "in": "path",
+                        "description": "The HTTP method this response is configured for"
+                    }
+                ]
+            },
+            "put": {
+                "summary": "Update response settings",
+                "description": "Allows to configure HTTP response of this basket. The service will reply with configured response to any HTTP\nrequest sent to the basket with appropriate HTTP method.\n\nIf nothing is configured, the default response is HTTP 200 - OK with empty content.\n",
+                "operationId": "BasketsNameResponsesMethodPut",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "path",
+                        "description": "The basket name"
+                    },
+                    {
+                        "name": "method",
+                        "in": "path",
+                        "description": "The HTTP method this response is configured for"
+                    },
+                    {
+                        "name": "response",
+                        "in": "body",
+                        "description": "HTTP response configuration"
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Baskets": {
+                "type": "object",
+                "properties": {
+                    "count": {
+                        "description": "",
+                        "type": "put"
+                    },
+                    "has_more": {
+                        "description": "",
+                        "type": "put"
+                    },
+                    "names": {
+                        "description": "",
+                        "type": "put"
+                    }
+                }
+            },
+            "Config": {
+                "type": "object",
+                "properties": {
+                    "capacity": {
+                        "description": "",
+                        "type": "put"
+                    },
+                    "expand_path": {
+                        "description": "",
+                        "type": "put"
+                    },
+                    "forward_url": {
+                        "description": "",
+                        "type": "put"
+                    },
+                    "insecure_tls": {
+                        "description": "",
+                        "type": "put"
+                    }
+                }
+            },
+            "Request": {
+                "type": "object",
+                "properties": {
+                    "body": {
+                        "description": "",
+                        "type": "put"
+                    },
+                    "content_length": {
+                        "description": "",
+                        "type": "put"
+                    },
+                    "date": {
+                        "description": "",
+                        "type": "put"
+                    },
+                    "method": {
+                        "description": "",
+                        "type": "put"
+                    },
+                    "path": {
+                        "description": "",
+                        "type": "put"
+                    },
+                    "query": {
+                        "description": "",
+                        "type": "put"
+                    }
+                }
+            },
+            "Requests": {
+                "type": "object",
+                "properties": {
+                    "count": {
+                        "description": "",
+                        "type": "put"
+                    },
+                    "has_more": {
+                        "description": "",
+                        "type": "put"
+                    },
+                    "requests": {
+                        "description": "",
+                        "type": "put"
+                    },
+                    "total_count": {
+                        "description": "",
+                        "type": "put"
+                    }
+                }
+            },
+            "Response": {
+                "type": "object",
+                "properties": {
+                    "body": {
+                        "description": "",
+                        "type": "put"
+                    },
+                    "is_template": {
+                        "description": "",
+                        "type": "put"
+                    },
+                    "status": {
+                        "description": "",
+                        "type": "put"
+                    }
+                }
+            },
+            "Token": {
+                "type": "object",
+                "properties": {
+                    "token": {
+                        "description": "",
+                        "type": "put"
+                    }
+                }
+            }
+        }
+    }
+}
