@@ -1,5 +1,5 @@
 {
-    "id": "f3d567208a83d78bb08012b9af847d50",
+    "id": "d758c21c299e2cc26032aaf41f0da245",
     "name": "Request Baskets",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "f2d18ceb1d7b4c44094dbf7d30ce19e8",
+            "id": "b30d02c80ac83e69c06ea32f33f3cdc3",
             "name": "Get baskets",
             "url": "httpsrbaskets.in\/\/baskets",
             "description": "Fetches a list of basket names managed by service. Require master token.",
@@ -51,11 +51,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "f3d567208a83d78bb08012b9af847d50",
+            "collectionId": "d758c21c299e2cc26032aaf41f0da245",
             "rawModeData": ""
         },
         {
-            "id": "2493d8e953be1b857b3944e39665476b",
+            "id": "f25687f06130e2cbc51d3882234c63fd",
             "name": "Delete basket",
             "url": "httpsrbaskets.in\/\/baskets\/{name}",
             "description": "Permanently deletes this basket and all collected requests.",
@@ -82,11 +82,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "f3d567208a83d78bb08012b9af847d50",
+            "collectionId": "d758c21c299e2cc26032aaf41f0da245",
             "rawModeData": ""
         },
         {
-            "id": "97ecf3cd6cc06c256bfc7bfd37c94cfd",
+            "id": "3d371b493b0814d802a0b819e655363d",
             "name": "Get basket settings",
             "url": "httpsrbaskets.in\/\/baskets\/{name}",
             "description": "Retrieves configuration settings of this basket.",
@@ -113,11 +113,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "f3d567208a83d78bb08012b9af847d50",
+            "collectionId": "d758c21c299e2cc26032aaf41f0da245",
             "rawModeData": ""
         },
         {
-            "id": "e3727be652dba5ccd2d45c5c47876357",
+            "id": "42556726bf75a9ac826150a5702f419a",
             "name": "Create new basket",
             "url": "httpsrbaskets.in\/\/baskets\/{name}",
             "description": "Creates a new basket with this name.",
@@ -151,11 +151,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "f3d567208a83d78bb08012b9af847d50",
+            "collectionId": "d758c21c299e2cc26032aaf41f0da245",
             "rawModeData": ""
         },
         {
-            "id": "27e7635e9410a913dd456f5518d029aa",
+            "id": "1a5f8e12130c5cee5d6cb79d3f5ae813",
             "name": "Update basket settings",
             "url": "httpsrbaskets.in\/\/baskets\/{name}",
             "description": "Updates configuration settings of this basket.\n\nSpecial configuration parameters for request forwarding:\n  * `insecure_tls` controls certificate verification when forwarding requests. Setting this parameter to `true`\n  allows to forward collected HTTP requests via HTTPS protocol even if the forward end-point is configured with\n  self-signed TLS\/SSL certificate. **Warning:** enabling this feature has known security implications.\n  * `expand_path` changes the logic of constructing taget URL when f",
@@ -189,11 +189,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "f3d567208a83d78bb08012b9af847d50",
+            "collectionId": "d758c21c299e2cc26032aaf41f0da245",
             "rawModeData": ""
         },
         {
-            "id": "46a59c5d2e4f5ef99691221f25e77aff",
+            "id": "9cd854ca408e35c297816ba939812277",
             "name": "Delete all requests",
             "url": "httpsrbaskets.in\/\/baskets\/{name}\/requests",
             "description": "Deletes all requests collected by this basket.",
@@ -220,11 +220,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "f3d567208a83d78bb08012b9af847d50",
+            "collectionId": "d758c21c299e2cc26032aaf41f0da245",
             "rawModeData": ""
         },
         {
-            "id": "0c01310f8d3539e39b2e912839715dec",
+            "id": "385c53999f893311cb1e6443485c19a4",
             "name": "Get collected requests",
             "url": "httpsrbaskets.in\/\/baskets\/{name}\/requests",
             "description": "Fetches collection of requests collected by this basket.",
@@ -279,11 +279,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "f3d567208a83d78bb08012b9af847d50",
+            "collectionId": "d758c21c299e2cc26032aaf41f0da245",
             "rawModeData": ""
         },
         {
-            "id": "a93146bdf730ff2824ec8c7e12d02597",
+            "id": "c1bf8c650034d0b76919f72e2fb95a00",
             "name": "Get response settings",
             "url": "httpsrbaskets.in\/\/baskets\/{name}\/responses\/{method}",
             "description": "Retrieves information about configured response of the basket. Service will reply with this response to any\nHTTP request sent to the basket with appropriate HTTP method.\n\nIf nothing is configured, the default response is HTTP 200 - OK with empty content.\n",
@@ -317,11 +317,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "f3d567208a83d78bb08012b9af847d50",
+            "collectionId": "d758c21c299e2cc26032aaf41f0da245",
             "rawModeData": ""
         },
         {
-            "id": "a23728d228fb99d15bb1db9b1cd2f24a",
+            "id": "7bda87b8947a19d842bf763bd7c506c1",
             "name": "Update response settings",
             "url": "httpsrbaskets.in\/\/baskets\/{name}\/responses\/{method}",
             "description": "Allows to configure HTTP response of this basket. The service will reply with configured response to any HTTP\nrequest sent to the basket with appropriate HTTP method.\n\nIf nothing is configured, the default response is HTTP 200 - OK with empty content.\n",
@@ -362,7 +362,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "f3d567208a83d78bb08012b9af847d50",
+            "collectionId": "d758c21c299e2cc26032aaf41f0da245",
             "rawModeData": ""
         }
     ]
