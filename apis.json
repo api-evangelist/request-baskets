@@ -12,8 +12,8 @@
         "service api",
         "storage"
     ],
-    "created": "2019-12-19",
-    "modified": "2019-12-19",
+    "created": "2019-12-21",
+    "modified": "2019-12-21",
     "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/request-baskets\/master\/apis.json",
     "specificationVersion": "0.14",
     "apis": [
@@ -31,13 +31,21 @@
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/request-baskets-openapi.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/request-baskets\/master\/request-baskets-openapi.json"
+                },
+                {
+                    "type": "x-postman-collecction",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/request-baskets\/master\/request-baskets-postman-collection.json"
                 }
             ]
         }
     ],
     "include": [],
     "x-common": [
+        {
+            "type": "APIs.json",
+            "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/apis.json"
+        },
         {
             "type": "Swagger",
             "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/28489-2019-09-03-16-37-03.json"
